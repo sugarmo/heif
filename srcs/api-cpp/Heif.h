@@ -13,10 +13,10 @@
 #ifndef HEIF_H
 #define HEIF_H
 
-#include <heifcommondatatypes.h>
-#include <heifreaderdatatypes.h>
-#include <heifwriterdatatypes.h>
-#include <helpers.h>
+#include <heif/heifcommondatatypes.h>
+#include <heif/heifreaderdatatypes.h>
+#include <heif/heifwriterdatatypes.h>
+#include <heif/helpers.h>
 
 #include <string>
 

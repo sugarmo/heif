@@ -367,7 +367,7 @@ void HevcDecoderConfigurationRecord::getConfigurationMap(ConfigurationMap& aMap)
     getOneParameterSet(pps, HevcNalUnitType::PPS);
     getOneParameterSet(vps, HevcNalUnitType::VPS);
 
-    aMap.insert({DecoderParameterType::HEVC_SPS, move(sps)});
-    aMap.insert({DecoderParameterType::HEVC_PPS, move(pps)});
-    aMap.insert({DecoderParameterType::HEVC_VPS, move(vps)});
+    aMap.insert({DecoderParameterType::HEVC_SPS, std::move(sps)});
+    aMap.insert({DecoderParameterType::HEVC_PPS, std::move(pps)});
+    aMap.insert({DecoderParameterType::HEVC_VPS, std::move(vps)});
 }

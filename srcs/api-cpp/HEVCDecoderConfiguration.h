@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include <DecoderConfiguration.h>
+#include <heif/DecoderConfiguration.h>
 
 namespace HEIFPP
 {

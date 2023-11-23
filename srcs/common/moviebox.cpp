@@ -114,7 +114,7 @@ void MovieBox::parseBox(ISOBMFF::BitStream& bitstr)
                 handlerType == "soun" ||  // Audio track
                 handlerType == "vide")    // Video track
             {
-                mTracks.push_back(move(trackBox));
+                mTracks.push_back(std::move(trackBox));
             }
         }
         else if (boxType == "mvex")

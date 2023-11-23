@@ -377,6 +377,6 @@ void AvcDecoderConfigurationRecord::getConfigurationMap(ConfigurationMap& aMap) 
     getOneParameterSet(pps, AvcNalUnitType::PPS);
 
     aMap.clear();
-    aMap.insert({DecoderParameterType::AVC_SPS, move(sps)});
-    aMap.insert({DecoderParameterType::AVC_PPS, move(pps)});
+    aMap.insert({DecoderParameterType::AVC_SPS, std::move(sps)});
+    aMap.insert({DecoderParameterType::AVC_PPS, std::move(pps)});
 }

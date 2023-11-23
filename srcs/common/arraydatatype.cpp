@@ -14,6 +14,8 @@
 #define _SCL_SECURE_NO_WARNINGS
 
 #include <algorithm>
+#include "heifcommondatatypes.h"
+#include "heifexport.h"
 #if defined(HEIF_READER_LIB)
 #include "heifreaderdatatypes.h"
 #endif
@@ -109,9 +111,9 @@ namespace HEIF
     instance(TrackInformation);
     instance(EditUnit);
     instance(SegmentInformation);
-
 #endif
-#if HEIF_WRITER_LIB
+
+#if HEIF_WRITER_LIB && !defined(HEIF_READER_LIB)
     instance(EditUnit);
 #endif
 

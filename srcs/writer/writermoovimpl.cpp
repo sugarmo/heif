@@ -297,7 +297,7 @@ namespace HEIF
             return ErrorCode::INVALID_FUNCTION_PARAMETER;  // timebase / timebase can't be zero
         }
 
-        uint32_t currentTime = TimeUtility::getSecondsSince1904();
+        uint32_t currentTime = static_cast<uint32_t>(TimeUtility::getSecondsSince1904());
         if (!mImageSequences.size())
         {
             mMovieBox.getMovieHeaderBox().setCreationTime(currentTime);
@@ -681,7 +681,7 @@ namespace HEIF
     /* *************************************************************** */
     ErrorCode WriterImpl::generateMoovBox()
     {
-        uint32_t modificationTime = TimeUtility::getSecondsSince1904();
+        uint32_t modificationTime = static_cast<uint32_t>(TimeUtility::getSecondsSince1904());
         uint64_t movieDuration    = 0;
         uint32_t movieTimescale   = 1000;
 
@@ -1610,7 +1610,7 @@ namespace HEIF
             return ErrorCode::INVALID_FUNCTION_PARAMETER;  // timebase / timebase can't be zero
         }
 
-        uint32_t currentTime = TimeUtility::getSecondsSince1904();
+        uint32_t currentTime = static_cast<uint32_t>(TimeUtility::getSecondsSince1904());
         if (!mImageSequences.size())
         {
             mMovieBox.getMovieHeaderBox().setCreationTime(currentTime);
@@ -1681,7 +1681,7 @@ namespace HEIF
             return ErrorCode::INVALID_FUNCTION_PARAMETER;  // timebase / timebase can't be zero
         }
 
-        uint32_t currentTime = TimeUtility::getSecondsSince1904();
+        uint32_t currentTime = static_cast<uint32_t>(TimeUtility::getSecondsSince1904());
         if (!mImageSequences.size())
         {
             mMovieBox.getMovieHeaderBox().setCreationTime(currentTime);

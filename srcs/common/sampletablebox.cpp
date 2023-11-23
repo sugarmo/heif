@@ -299,7 +299,7 @@ void SampleTableBox::parseBox(ISOBMFF::BitStream& bitstr)
         {
             UniquePtr<SampleGroupDescriptionBox> sgpd(CUSTOM_NEW(SampleGroupDescriptionBox, ()));
             sgpd->parseBox(subBitstr);
-            mSampleGroupDescriptionBoxes.push_back(move(sgpd));
+            mSampleGroupDescriptionBoxes.push_back(std::move(sgpd));
         }
         else if (boxType == "sbgp")
         {
@@ -318,7 +318,7 @@ void SampleTableBox::parseBox(ISOBMFF::BitStream& bitstr)
             {  // special case, there can be less samples defined in this box, but not more
                 throw RuntimeError("Non-matching sample counts from sbgp to rest of sample table");
             }
-            mSampleToGroupBoxes.push_back(move(sampleToGroupBox));
+            mSampleToGroupBoxes.push_back(std::move(sampleToGroupBox));
         }
         else if (boxType == "cslg")
         {

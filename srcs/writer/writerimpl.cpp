@@ -391,7 +391,7 @@ namespace HEIF
 
                     auto completeImage = embedJPEGDecoderConfig(decoderSpecInfo->elements[0], aData);
 
-                    info = parser.parse(completeImage.data(), completeImage.size());
+                    info = parser.parse(completeImage.data(), static_cast<unsigned int>(completeImage.size()));
                 }
                 else if (decoderSpecInfo && decoderSpecInfo->size > 1)
                 {

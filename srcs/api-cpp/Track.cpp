@@ -824,7 +824,7 @@ EntityGroup* Track::getGroupById(const HEIF::GroupId& aId)
 
 std::uint32_t Track::getTimestampCount()
 {
-    return mTimestamps.size;
+    return static_cast<std::uint32_t>(mTimestamps.size);
 }
 
 void Track::getTimestamp(std::uint32_t index, std::uint32_t& sampleId, std::int64_t& timestamp)
