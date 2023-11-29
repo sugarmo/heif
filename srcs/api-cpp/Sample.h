@@ -12,8 +12,9 @@
 
 #pragma once
 
-#include <DecoderConfiguration.h>
-#include <Heif.h>
+#include <heif/DecoderConfiguration.h>
+#include <heif/Heif.h>
+
 namespace HEIFPP
 {
     class Track;
