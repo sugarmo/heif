@@ -1174,7 +1174,6 @@ void Heif::removeProperty(ItemProperty* aProperty)
     if (!RemoveItemFrom(mProperties, aProperty))
     {
         // tried to remove property that was not added
-        HEIF_ASSERT(false);
     }
 }
 void Heif::removeItem(Item* aItem)
@@ -1188,7 +1187,6 @@ void Heif::removeItem(Item* aItem)
     if (!RemoveItemFrom(mItems, aItem))
     {
         // Tried to remove an item that was not added!
-        HEIF_ASSERT(false);
     }
 
     // secondly remove the item from the mItemsOfType lists..
@@ -1198,7 +1196,6 @@ void Heif::removeItem(Item* aItem)
         if (!RemoveItemFrom(tmp->second, aItem))
         {
             // Tried to remove an item that was not added!
-            HEIF_ASSERT(false);
         }
         // and cleanup the type map if it was the last of it's type
         if (tmp->second.empty())
@@ -1547,7 +1544,6 @@ void Heif::removeDecoderConfig(DecoderConfig* aDecoderConfig)
     if (!RemoveItemFrom(mDecoderConfigs, aDecoderConfig))
     {
         // Tried to remove a non added DecoderConfiguration
-        HEIF_ASSERT(false);
     }
 }
 
@@ -1577,7 +1573,6 @@ void Heif::removeTrack(Track* aTrack)
     if (!RemoveItemFrom(mTracks, aTrack))
     {
         // Tried to remove an item that was not added!
-        HEIF_ASSERT(false);
     }
 }
 
@@ -1592,7 +1587,6 @@ void Heif::removeSample(Sample* aSample)
     if (!RemoveItemFrom(mSamples, aSample))
     {
         // Tried to remove an item that was not added!
-        HEIF_ASSERT(false);
     }
 }
 
@@ -1609,7 +1603,6 @@ void Heif::removeGroup(EntityGroup* aItem)
     if (!RemoveItemFrom(mGroups, aItem))
     {
         // Tried to remove an item that was not added!
-        HEIF_ASSERT(false);
     }
 
     // secondly remove the item from the mItemsOfType lists..
@@ -1619,7 +1612,6 @@ void Heif::removeGroup(EntityGroup* aItem)
         if (!RemoveItemFrom(tmp->second, aItem))
         {
             // Tried to remove an item that was not added!
-            HEIF_ASSERT(false);
         }
         // and cleanup the type map if it was the last of it's type
         if (tmp->second.empty())
