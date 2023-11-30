@@ -22,7 +22,7 @@ namespace HEIFPP
     class AudioSample;
     class VideoSample;
     class CleanApertureProperty;
-    class AuxProperty;
+    class AuxiliaryProperty;
     class AlternativeTrackGroup;
 
     /** @brief Track abstraction*/
