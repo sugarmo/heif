@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include <heif/MetaItem.h>
+#include "MetaItem.h"
 
 namespace HEIFPP
 {

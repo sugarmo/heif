@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include <heif/ItemProperty.h>
+#include "ItemProperty.h"
 
 namespace HEIFPP
 {

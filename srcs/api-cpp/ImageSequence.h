@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include <heif/VideoTrack.h>
+#include "VideoTrack.h"
 
 namespace HEIFPP
 {

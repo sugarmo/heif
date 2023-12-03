@@ -12,8 +12,8 @@
 
 #pragma once
 
-#include <heif/DecoderConfiguration.h>
-#include <heif/Heif.h>
+#include "DecoderConfiguration.h"
+#include "Heif.h"
 
 namespace HEIFPP
 {
