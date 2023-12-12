@@ -21,7 +21,7 @@
 void writeImageOverlay(const ImageOverlay& iovl, BitStream& output)
 {
     bool write32BitFields = false;
-    if ((iovl.outputWidth > std::numeric_limits<std::uint16_t>::max()) &&
+    if ((iovl.outputWidth > std::numeric_limits<std::uint16_t>::max()) ||
         (iovl.outputHeight > std::numeric_limits<std::uint16_t>::max()))
     {
         write32BitFields = true;

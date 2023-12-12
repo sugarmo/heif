@@ -21,7 +21,7 @@ void writeImageGrid(const ImageGrid& grid, BitStream& output)
 {
     bool write32BitFields = false;
     output.write8Bits(0);  // version = 0
-    if ((grid.outputWidth > std::numeric_limits<std::uint16_t>::max()) &&
+    if ((grid.outputWidth > std::numeric_limits<std::uint16_t>::max()) ||
         (grid.outputHeight > std::numeric_limits<std::uint16_t>::max()))
     {
         write32BitFields = true;
