@@ -178,7 +178,7 @@ namespace HEIF
 
         const MediaData& mediaData = mMediaData.at(aMediaDataId);
 
-        aImageId = Context::getValue();
+        aImageId = Image::getValue();
 
         ImageCollection::Image newImage;
         newImage.imageId                  = aImageId;
@@ -776,7 +776,7 @@ namespace HEIF
         {
             return ErrorCode::INVALID_ITEM_ID;
         }
-        derivedImageId = Context::getValue();
+        derivedImageId = Image::getValue();
         ImageCollection::Image newImage;
         newImage.isHidden                       = false;
         newImage.imageId                        = derivedImageId;
@@ -891,7 +891,7 @@ namespace HEIF
             return ErrorCode::INVALID_FUNCTION_PARAMETER;
         }
 
-        gridId = Context::getValue();
+        gridId = Image::getValue();
         ImageCollection::Image newImage;
         newImage.imageId                = gridId;
         mImageCollection.images[gridId] = newImage;
@@ -942,7 +942,7 @@ namespace HEIF
             return ErrorCode::INVALID_FUNCTION_PARAMETER;
         }
 
-        overlayId = Context::getValue();
+        overlayId = Image::getValue();
         ImageCollection::Image newImage;
         newImage.imageId                   = overlayId;
         mImageCollection.images[overlayId] = newImage;
@@ -1102,7 +1102,7 @@ namespace HEIF
                 {MediaFormat::XMP, {FourCCInt("mime"), "", "application/rdf+xml"}}};
             const FormatNames& format = formatMapping.at(mediaData.mediaFormat);
 
-            mMetadataItems[mediaDataId] = Context::getValue();
+            mMetadataItems[mediaDataId] = Image::getValue();
 
             ItemInfoEntry infe;
             infe.setVersion(2);

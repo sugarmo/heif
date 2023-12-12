@@ -20,6 +20,17 @@
 #include "writerdatatypesinternal.hpp"
 
 typedef std::uint32_t ContextId;
+
+namespace Image
+{
+    /** @brief Generate a context ID.
+     * @return A new context ID. It will be unique, unless reset() has been called. */
+    ContextId getValue();
+
+    /** Reset ContextId value space. */
+    void reset();
+}  // name
+
 namespace Context
 {
     /** @brief Generate a context ID.

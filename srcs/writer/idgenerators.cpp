@@ -13,6 +13,22 @@
 
 #include "idgenerators.hpp"
 
+namespace Image
+{
+    static const int INITIAL_VALUE = 1;
+    ContextId mValue               = INITIAL_VALUE;
+
+    ContextId getValue()
+    {
+        return mValue++;
+    }
+
+    void reset()
+    {
+        mValue = INITIAL_VALUE;
+    }
+}  // namespace Image
+
 namespace Context
 {
     static const int INITIAL_VALUE = 1000;

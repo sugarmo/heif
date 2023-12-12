@@ -111,6 +111,7 @@ namespace HEIF
     void WriterImpl::clear()
     {
         Context::reset();
+        Image::reset();
         Track::reset();
 
         mAllDecoderConfigs.clear();
@@ -159,6 +160,7 @@ namespace HEIF
 
         clear();
         Context::reset();
+        Image::reset();
         Track::reset();
 
         if (outputConfig.progressiveFile)
