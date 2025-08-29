@@ -242,19 +242,21 @@ HEIF::ErrorCode CodedImageItem::loadItemData()
             }
             else
             {
-                switch (mConfig->getMediaFormat())
-                {
-                case HEIF::MediaFormat::AVC:
-                case HEIF::MediaFormat::HEVC:
-                {
-                    error = NAL_State::convertToByteStream(mBuffer, mBufferSize) ? HEIF::ErrorCode::OK
-                                                                                 : HEIF::ErrorCode::MEDIA_PARSING_ERROR;
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
+                if (mConfig != nullptr) {
+                    switch (mConfig->getMediaFormat())
+                    {
+                    case HEIF::MediaFormat::AVC:
+                    case HEIF::MediaFormat::HEVC:
+                    {
+                        error = NAL_State::convertToByteStream(mBuffer, mBufferSize) ? HEIF::ErrorCode::OK
+                                                                                     : HEIF::ErrorCode::MEDIA_PARSING_ERROR;
+                        break;
+                    }
+                    default:
+                    {
+                        break;
+                    }
+                    }
                 }
             }
         }
